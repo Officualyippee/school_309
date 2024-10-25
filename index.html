@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<body>
+    <h2>Расписание уроков:</h2>
+    <select id="imageSelector" onchange="updateImage()">
+        <option value="img1">Понедельник</option>
+        <option value="img2">Вторник</option>
+        <option value="img3">Среда</option>
+        <option value="img4">Четверг</option>
+        <option value="img5">Пятница</option>
+    </select>
+    <br>
+    <img id="selectedImage" src="img1.jpg" alt="Selected Image" width="200px">
+
+    <script>
+        function updateImage() {
+            var selector = document.getElementById("imageSelector");
+            var selectedValue = selector.value;
+            var image = document.getElementById("selectedImage");
+            image.src = selectedValue + ".jpg"; // Подставляем имя файла в src атрибут
+        }
+    </script>
+    <h5>2024-2025</h5>
+</body>
+</html>
+
+    
+
